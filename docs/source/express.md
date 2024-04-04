@@ -14,7 +14,7 @@ import { ApolloServer, gql }  from 'apollo-server-express';
 import { createServer } from 'http';
 import { execute, subscribe } from 'graphql';
 import { PubSub } from 'graphql-subscriptions';
-import { SubscriptionServer } from 'subscriptions-transport-ws';
+import { SubscriptionServer } from 'persisted-subscriptions-transport-ws';
 import { myGraphQLSchema } from './my-schema';
 
 const PORT = 3000;

@@ -45,12 +45,12 @@ pubsub.publish('commentAdded', payload);
 
 `SubscriptionServer` will manage the WebSocket connection between the GraphQL engine and the clients.
 
-We will use the server provided by the `subscriptions-transport-ws` transport package.
+We will use the server provided by the `persisted-subscriptions-transport-ws` transport package.
 
-First install the `subscriptions-transport-ws` package:
+First install the `persisted-subscriptions-transport-ws` package:
 
 ```bash
-npm install --save subscriptions-transport-ws
+npm install --save persisted-subscriptions-transport-ws
 ```
 
 `SubscriptionServer` expect a `schema`, `execute` and `subscribe` (optional) and a http server. Here is complete setup code, supporting both queries and subscriptions.
@@ -65,7 +65,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import { execute, subscribe } from 'graphql';
 import { createServer } from 'http';
-import { SubscriptionServer } from 'subscriptions-transport-ws';
+import { SubscriptionServer } from 'persisted-subscriptions-transport-ws';
 
 import { schema } from './src/schema';
 

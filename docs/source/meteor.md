@@ -7,7 +7,7 @@ Meteor exposes `httpServer` server through the `meteor/webapp` package, so you c
 ```js
 import { WebApp } from 'meteor/webapp';
 import { execute, subscribe } from 'graphql';
-import { SubscriptionServer } from 'subscriptions-transport-ws';
+import { SubscriptionServer } from 'persisted-subscriptions-transport-ws';
 import { myGraphQLSchema } from './my-schema';
 
 new SubscriptionServer({

@@ -11,7 +11,7 @@ You can use these `connectionParams` in your `onConnect` callback and validate t
 
 ```js
 import { execute, subscribe } from 'graphql';
-import { SubscriptionServer } from 'subscriptions-transport-ws';
+import { SubscriptionServer } from 'persisted-subscriptions-transport-ws';
 import { schema } from './schema';
 
 const validateToken = (authToken) => {

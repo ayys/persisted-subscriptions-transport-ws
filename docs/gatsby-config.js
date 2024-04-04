@@ -10,7 +10,7 @@ module.exports = {
         root: __dirname,
         subtitle: 'GraphQL Subscriptions Guide',
         description: 'A guide to using GraphQL Subscriptions',
-        githubRepo: 'apollographql/subscriptions-transport-ws',
+        githubRepo: 'ayys/persisted-subscriptions-transport-ws',
         sidebarCategories: {
           null: [
             'index',

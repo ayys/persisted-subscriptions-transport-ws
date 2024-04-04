@@ -14,7 +14,7 @@ Example below uses the ApolloClient, but it would work similarly with other grap
 
 ```js
 import { Server, WebSocket } from "mock-socket-with-protocol";
-import { SubscriptionServer } from "subscriptions-transport-ws";
+import { SubscriptionServer } from "persisted-subscriptions-transport-ws";
 // (..) Skipping all the other imports
 
 const gqClient = () => {
@@ -74,4 +74,3 @@ test(
 );
 
 ```
-
