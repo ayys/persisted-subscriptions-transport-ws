@@ -410,10 +410,10 @@ export class SubscriptionClient {
   }
 
   private checkOperationOptions(options: OperationOptions, handler: (error: Error[], result?: any) => void) {
-    const { query, variables, operationName } = options;
+    const { query, variables, operationName, id } = options;
 
-    if (!query) {
-      throw new Error('Must provide a query.');
+    if (!query && !id) {
+      throw new Error('Must provide either a query or a subscription id.');
     }
 
     if (!handler) {
@@ -421,7 +421,6 @@ export class SubscriptionClient {
     }
 
     if (
-      ( !isString(query) && !getOperationAST(query, operationName)) ||
       ( operationName && !isString(operationName)) ||
       ( variables && !isObject(variables))
     ) {
